@@ -1,0 +1,223 @@
+/*左侧菜单栏*/
+.menu {
+	position: fixed;
+	left: 50px;
+	top: 50px;
+	width: 40px;
+	height: 39px;
+	padding: 10px 5px 0;
+	background: #2b2b2b;
+	border-radius: 3px;
+}
+.menu p{
+	width: 40px;
+	height: 3px;
+	background: #fff;
+	margin-bottom: 10px;
+}
+.menu_box{
+	width: 170px;
+	height: 100%;
+	font-size: 16px;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: rgba(0,0,0,0.5);
+	padding-top: 100px;
+	-webkit-transform:translateX(-170px);
+	-moz-transform:translateX(-170px);
+}
+@-webkit-keyframes move{
+	to{-webkit-transform:translateX(0);}
+}
+@-moz-keyframes move{
+	to{-moz-transform:translateX(0);}
+}
+.menu_box.move{
+	-webkit-animation:1s move ease forwards;
+	-moz-animation:1s move ease forwards;
+}
+.menu_box ul{
+	padding-top: 100px;
+	padding:0 10px;
+}
+.menu_box ul li{
+	margin-bottom: 30px; 
+	width: 150px;
+	height: 52px;
+	overflow: hidden;
+	position: relative;
+	-webkit-transition:1s all ease;
+	-moz-transition:1s all ease;
+}
+.menu_box li a{
+	margin-bottom: 10px;
+	padding-top:10px;
+	color: #fff;
+	display: block;
+	-webkit-transition:.4s all ease;
+	-moz-transition:.4s all ease;
+	-webkit-transform:translateY(-15px);
+	-moz-transform:translateY(-15px);
+}
+.menu_box svg{	
+	position: absolute;
+	left: 0;
+	top: 0;
+	stroke-dashoffset:350px;
+	stroke-dasharray:350px;
+	-moz-transition:.4s all ease;
+	-webkit-transition:.4s all ease;
+}
+.menu_box li:hover svg{
+	stroke-dashoffset:0;
+}
+.menu_box li:hover a{
+	color: #333;
+	-webkit-transform:translateY(5px);
+	-moz-transform:translateY(5px);
+}
+/*banner*/
+.banner{
+	width: 0;
+	margin: 0 auto 20px;	
+	text-align: center;
+	position: relative;
+	opacity: 0;
+	border:44px solid #2b2b2b;
+	border-radius: 26px;
+	box-sizing:border-box;
+}
+.banner img{
+	display: block;
+	margin-bottom: 50px;
+	opacity: 0;
+}
+.nav{
+	width: 0;
+	height: 50px;
+	background: #2b2b2b;
+	margin: 0 auto 10px;
+	border-radius: 5px;
+	opacity: 0;
+}
+.nav ul{
+	display: -webkit-box;
+	display: -moz-box;
+}
+.nav ul li{
+	-webkit-box-flex:1;
+	width:100px;
+	height: 50px;
+	font-size: 16px;
+	text-align: center;
+	line-height: 50px;
+	text-shadow:1px 1px 5px #2b2b2b;
+}
+.nav ul li a{
+	color: #fff;
+}
+/*案例列表*/
+section .title{
+	font-size: 30px; 
+	text-shadow:1px 1px 5px #fff; 	
+	margin-bottom: 20px;
+}
+section .html_content{
+	margin-bottom: 20px;
+}
+section .html_content ul{
+	width: 900px;
+	height: 400px;
+	overflow: hidden;
+}
+section .html_content ul li{
+	width: 280px;
+	height: 180px;
+	margin-right: 20px;
+	float: left;
+	margin-bottom: 20px;
+	overflow: hidden;
+	opacity: 0;
+	-webkit-transform:scale(0);
+	-moz-transform:scale(0);
+	-webkit-transition:1s all ease;
+	-moz-transition:1s all ease;
+}
+section .html_content ul li img{
+	width:280px;
+	height: 180px;
+	-webkit-transition:.4s all ease;
+	-moz-transition:.4s all ease;
+}
+section .html_content ul li p{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.2);
+	-webkit-transiton:1s all ease;
+	-moz-transiton:1s all ease;
+}
+section .html_content ul li:hover{
+	box-shadow: 0 2px 5px #000;
+}
+section .html_content ul li:hover p{
+	background: rgba(0,0,0,0);
+}
+section .html_content ul li:hover img{
+	width:320px;
+	height: 200px;
+	margin-left: -20px;
+	margin-top: -10px;
+}
+section .more{
+	border: 1px solid #dfdfdf;
+	width: 300px;
+	height: 50px;
+	border-radius: 30px;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 50px;
+	font-size: 20px;
+}
+section .more a{
+	color:#2b2b2b;
+	padding: 15px 100px;
+} 
+section .js_content{
+	margin-bottom:100px; 
+}
+section .js_content ul{
+	overflow: hidden;
+}
+section .js_content ul li{
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	opacity: 0;
+	-webkit-transform:scale(0);
+	-moz-transform:scale(0);
+	-webkit-transition:1s all ease;
+	-moz-transition:1s all ease;
+	background: #666;
+}
+section .js_content ul li img{
+	-webkit-transition:.4s all ease;
+	-moz-transition:.4s all ease;
+}
+/*底部*/
+footer{
+	width: 100%;
+	height: 100px;
+	background: #ccc;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	line-height: 100px;
+	color: #333;
+}
